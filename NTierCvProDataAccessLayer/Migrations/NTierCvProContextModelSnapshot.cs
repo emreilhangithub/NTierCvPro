@@ -199,7 +199,7 @@ namespace NTierCvPro.DataAccessLayer.Migrations
                     b.ToTable("Iletisim");
                 });
 
-            modelBuilder.Entity("NTierCvPro.EntityLayer.Concrete.Sertifikalarım", b =>
+            modelBuilder.Entity("NTierCvPro.EntityLayer.Concrete.Sertifikalarim", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
