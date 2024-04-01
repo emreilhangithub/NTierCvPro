@@ -1,6 +1,6 @@
 ﻿namespace NTierCvPro.EntityLayer.Concrete
 {
-    public class Sertifikalarım
+    public class Sertifikalarim
     {
         public int ID { get; set; }
         public string Aciklama { get; set; }

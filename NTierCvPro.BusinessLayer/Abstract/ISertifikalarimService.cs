@@ -2,7 +2,7 @@
 
 namespace NTierCvPro.BusinessLayer.Abstract
 {
-    public interface ISertifikalarımService : IGenericUowService<Sertifikalarım>
+    public interface ISertifikalarimService : IGenericUowService<Sertifikalarim>
     {
     }
 }

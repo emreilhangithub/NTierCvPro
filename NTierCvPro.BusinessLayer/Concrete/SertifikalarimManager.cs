@@ -6,57 +6,57 @@ using System.Linq.Expressions;
 
 namespace NTierCvPro.BusinessLayer.Concrete
 {
-    public class SertifikalarımManager : ISertifikalarımService
+    public class SertifikalarimManager : ISertifikalarimService
     {
-        private readonly ISertifikalarımDal _sertifikalarımDal;
+        private readonly ISertifikalarimDal _sertifikalarımDal;
         private readonly IUowDal _uowDal;
 
-        public SertifikalarımManager(ISertifikalarımDal sertifikalarımDal, IUowDal uowDal)
+        public SertifikalarimManager(ISertifikalarimDal sertifikalarımDal, IUowDal uowDal)
         {
             _sertifikalarımDal = sertifikalarımDal;
             _uowDal = uowDal;
         }
 
-        public void MultiInsert(List<Sertifikalarım> t)
+        public void MultiInsert(List<Sertifikalarim> t)
         {
             _sertifikalarımDal.MultiInsert(t);
             _uowDal.Save();
         }
 
-        public void MultiUpdate(List<Sertifikalarım> t)
+        public void MultiUpdate(List<Sertifikalarim> t)
         {
             _sertifikalarımDal.MultiUpdate(t);
             _uowDal.Save();
         }
 
-        public void TDelete(Sertifikalarım t)
+        public void TDelete(Sertifikalarim t)
         {
             _sertifikalarımDal.Delete(t);
             _uowDal.Save();
         }
 
-        public Sertifikalarım TFind(Expression<Func<Sertifikalarım, bool>> where)
+        public Sertifikalarim TFind(Expression<Func<Sertifikalarim, bool>> where)
         {
             return _sertifikalarımDal.Find(where);
         }
 
-        public Sertifikalarım TGetById(int id)
+        public Sertifikalarim TGetById(int id)
         {
             return _sertifikalarımDal.GetById(id);
         }
 
-        public List<Sertifikalarım> TGetList()
+        public List<Sertifikalarim> TGetList()
         {
             return _sertifikalarımDal.GetList();
         }
 
-        public void TInsert(Sertifikalarım t)
+        public void TInsert(Sertifikalarim t)
         {
             _sertifikalarımDal.Insert(t);
             _uowDal.Save();
         }
 
-        public void TUpdate(Sertifikalarım t)
+        public void TUpdate(Sertifikalarim t)
         {
             _sertifikalarımDal.Update(t);
             _uowDal.Save();

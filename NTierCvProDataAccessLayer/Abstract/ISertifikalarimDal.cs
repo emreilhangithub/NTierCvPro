@@ -2,7 +2,7 @@
 
 namespace NTierCvPro.DataAccessLayer.Abstract
 {
-    public interface ISertifikalarımDal : IGenericUowDal<Sertifikalarım>
+    public interface ISertifikalarimDal : IGenericUowDal<Sertifikalarim>
     {
     }
 }

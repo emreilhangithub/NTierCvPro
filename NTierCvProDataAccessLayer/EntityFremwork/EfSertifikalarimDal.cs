@@ -5,9 +5,9 @@ using NTierCvPro.EntityLayer.Concrete;
 
 namespace NTierCvPro.DataAccessLayer.EntityFremwork
 {
-    public class EfSertifikalarımDal : GenericUowRepository<Sertifikalarım>, ISertifikalarımDal
+    public class EfSertifikalarimDal : GenericUowRepository<Sertifikalarim>, ISertifikalarimDal
     {
-        public EfSertifikalarımDal(NTierCvProContext context) : base(context)
+        public EfSertifikalarimDal(NTierCvProContext context) : base(context)
         {
         }
     }
