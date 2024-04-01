@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NTierCvPro.BusinessLayer\NTierCvPro.BusinessLayer.csproj" />
     <ProjectReference Include="..\NTierCvProDataAccessLayer\NTierCvPro.DataAccessLayer.csproj" />
   </ItemGroup>
   
