@@ -19,23 +19,23 @@ namespace NTierCvPro.DataAccessLayer.Repositories
         }
         public void Delete(T t)
         {
-            _context.Remove(t);
+            _context.Remove(t); //nesneyi siler.
         }
 
         public T Find(Expression<Func<T, bool>> where)
         {
             return _context.Set<T>().AsNoTracking().FirstOrDefault(where);
+            //berlitilen nesneyi where koşuluna göre döner
+            //AsNoTracking izlemeyi engeller.
         }
-
         public T GetById(int id)
-        {
-            //belirtilen ID'ye sahip nesneyi alır.
-            return _context.Set<T>().Find(id);
+        {            
+            return _context.Set<T>().Find(id); //belirtilen ID'ye sahip nesneyi alır.
         }
 
         public List<T> GetList()
         {
-            return _context.Set<T>().ToList();
+            return _context.Set<T>().ToList(); // tüm datayı çekip liste olarak döner.
         }
 
         public void Insert(T t)
@@ -50,11 +50,11 @@ namespace NTierCvPro.DataAccessLayer.Repositories
 
         public void MultiUpdate(List<T> t)
         {
-            _context.UpdateRange(t); //toplu güncelleme yapar.
+            _context.UpdateRange(t); //nesneyi toplu günceller.
         }
         public void MultiInsert(List<T> t)
         {
-            _context.AddRange(t); // toplu ekleme yapar.
+            _context.AddRange(t); // nesneyi toplu ekler.
         }
     }
 }
