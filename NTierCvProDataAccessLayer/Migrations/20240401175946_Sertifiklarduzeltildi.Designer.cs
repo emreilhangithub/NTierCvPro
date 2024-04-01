@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NTierCvPro.DataAccessLayer.Context;
 
@@ -11,9 +12,10 @@ using NTierCvPro.DataAccessLayer.Context;
 namespace NTierCvPro.DataAccessLayer.Migrations
 {
     [DbContext(typeof(NTierCvProContext))]
-    partial class NTierCvProContextModelSnapshot : ModelSnapshot
+    [Migration("20240401175946_Sertifiklarduzeltildi")]
+    partial class Sertifiklarduzeltildi
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -217,7 +219,7 @@ namespace NTierCvPro.DataAccessLayer.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("Sertifikalarim");
+                    b.ToTable("Sertifikalarım");
                 });
 
             modelBuilder.Entity("NTierCvPro.EntityLayer.Concrete.SosyalMedya", b =>

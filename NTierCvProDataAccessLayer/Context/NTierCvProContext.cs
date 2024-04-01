@@ -15,7 +15,7 @@ namespace NTierCvPro.DataAccessLayer.Context
         public DbSet<Hakkimda> Hakkimda { get; set; }
         public DbSet<Hobilerim> Hobilerim { get; set; }
         public DbSet<Iletisim> Iletisim { get; set; }
-        public DbSet<Sertifikalarim> Sertifikalarım { get; set; }
+        public DbSet<Sertifikalarim> Sertifikalarim { get; set; }
         public DbSet<Yeteneklerim> Yeteneklerim { get; set; }
         public DbSet<SosyalMedya> SosyalMedya { get; set; }
     }
