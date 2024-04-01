@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NTierCvProEntityLayer
+namespace NTierCvPro.EntityLayer.Concrete
 {
-    public class Admin
+    public class Yeteneklerim
     {
         public int ID { get; set; }
-        public string KullaniciAdi { get; set; }
-        public string Sifre { get; set; }
+        public string Yetenek { get; set; }
+        public byte? Oran { get; set; }
     }
 }

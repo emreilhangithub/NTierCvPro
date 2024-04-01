@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NTierCvProEntityLayer
+namespace NTierCvPro.EntityLayer.Concrete
 {
-    public class Hobilerim
+    public class Admin
     {
         public int ID { get; set; }
-        public string Aciklama1 { get; set; }
-        public string Aciklama2 { get; set; }
+        public string KullaniciAdi { get; set; }
+        public string Sifre { get; set; }
     }
 }
