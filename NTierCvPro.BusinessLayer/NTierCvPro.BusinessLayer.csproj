@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NTierCvProDataAccessLayer\NTierCvPro.DataAccessLayer.csproj" />
     <ProjectReference Include="..\NTierCvProEntityLayer\NTierCvPro.EntityLayer.csproj" />
   </ItemGroup>
 

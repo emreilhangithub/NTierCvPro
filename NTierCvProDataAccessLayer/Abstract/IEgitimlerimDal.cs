@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NTierCvPro.DataAccessLayer.Abstract
 {
-    internal interface IEgitimlerimDal : IGenericUowDal<Egitimlerim>
+    public interface IEgitimlerimDal : IGenericUowDal<Egitimlerim>
     {
     }
 }
