@@ -2,12 +2,7 @@
 using NTierCvPro.DataAccessLayer.Abstract;
 using NTierCvPro.DataAccessLayer.UnitOfWork;
 using NTierCvPro.EntityLayer.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NTierCvPro.BusinessLayer.Concrete
 {

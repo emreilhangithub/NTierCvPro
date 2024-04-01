@@ -1,12 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using NTierCvPro.DataAccessLayer.Abstract;
 using NTierCvPro.DataAccessLayer.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NTierCvPro.DataAccessLayer.Repositories
 {
