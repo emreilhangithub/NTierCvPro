@@ -66,9 +66,8 @@
                         <a href="mailto:@x.Mail">@x.Mail</a>
                     </div>
                     <p class="lead mb-5">@x.Aciklama</p>
-                    
-                   @*  @Html.Partial("SosyalMedya", new List<NTierCvPro.EntityLayer.Concrete.SosyalMedya>()) *@
-                    @await Html.PartialAsync("SosyalMedyaPartial")
+                 
+                    @await Component.InvokeAsync("SosyalMedya")
                 </div>
             </section>
         }
@@ -76,32 +75,32 @@
 
         <!-- Experience-->
         <section class="resume-section" id="experience">
-            @Html.Partial("Deneyim", new List<NTierCvPro.EntityLayer.Concrete.Deneyimlerim>())
+            @await Component.InvokeAsync("Deneyim")
         </section>
         <hr class="m-0" />
         <!-- Education-->
         <section class="resume-section" id="education">
-            @Html.Partial("Egitimlerim", new List<NTierCvPro.EntityLayer.Concrete.Egitimlerim>())
+            @await Component.InvokeAsync("Egitimlerim")
         </section>
         <hr class="m-0" />
         <!-- Skills-->
         <section class="resume-section" id="skills">
-            @Html.Partial("Yeteneklerim", new List<NTierCvPro.EntityLayer.Concrete.Yeteneklerim>())
+            @await Component.InvokeAsync("Yeteneklerim")
         </section>
         <hr class="m-0" />
         <!-- Interests-->
         <section class="resume-section" id="interests">
-            @Html.Partial("Hobilerim", new List<NTierCvPro.EntityLayer.Concrete.Hobilerim>())
+            @await Component.InvokeAsync("Hobilerim")
         </section>
         <hr class="m-0" />
         <!-- Awards-->
         <section class="resume-section" id="awards">
-            @Html.Partial("Sertifikalar", new List<NTierCvPro.EntityLayer.Concrete.Sertifikalarim>())
+            @await Component.InvokeAsync("Sertifikalar")
         </section>
         <hr class="m-0" />
         <!-- Contact-->
         <section class="resume-section" id="contact">
-            @Html.Partial("Iletisim", new List<NTierCvPro.EntityLayer.Concrete.Iletisim>())
+            @await Component.InvokeAsync("Iletisim")
         </section>
     </div>
     <!-- Bootstrap core JS-->
