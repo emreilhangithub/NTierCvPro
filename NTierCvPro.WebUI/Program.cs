@@ -3,13 +3,9 @@ using NTierCvPro.BusinessLayer.Concrete;
 using NTierCvPro.DataAccessLayer.Abstract;
 using NTierCvPro.DataAccessLayer.Context;
 using NTierCvPro.DataAccessLayer.EntityFremwork;
+using NTierCvPro.DataAccessLayer.UnitOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-builder.Services.AddControllersWithViews();
-
-var app = builder.Build();
 
 /* INJECTION ISLEMLERI */
 builder.Services.AddDbContext<NTierCvProContext>();
@@ -33,7 +29,14 @@ builder.Services.AddScoped<IIletisimService, IletisimManager>();
 builder.Services.AddScoped<ISertifikalarimService, SertifikalarimManager>();
 builder.Services.AddScoped<ISosyalMedyaService, SosyalMedyaManager>();
 builder.Services.AddScoped<IYeteneklerimService, YeteneklerimManager>();
+
+builder.Services.AddScoped<IUowDal, UowDal>();
+
 /* INJECTION ISLEMLERI */
+
+// Add services to the container.
+builder.Services.AddControllersWithViews();
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -48,6 +51,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Default}/{action=Index}/{id?}");
 
 app.Run();

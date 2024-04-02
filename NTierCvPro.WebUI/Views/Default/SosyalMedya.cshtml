@@ -1,0 +1,10 @@
+﻿@using NTierCvPro.EntityLayer.Concrete
+@model List<NTierCvPro.EntityLayer.Concrete.SosyalMedya>
+
+<div class="social-icons">
+
+    @foreach (var item in Model)
+    {
+        <a class="social-icon" href="@item.Link"><i class="@item.Ikon"></i></a>
+    }
+</div> 

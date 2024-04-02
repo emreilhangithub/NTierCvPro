@@ -1,10 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-
-@using NTierCvPro.EntityLayer.Concrete
+﻿@using NTierCvPro.EntityLayer.Concrete
 @model List<Hakkimda>
 
 @{
@@ -31,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="/startbootstrap-resume-gh-pages/css/styles.css" rel="stylesheet" />
+    <link href="~/CvFrontEnd/css/styles.css" rel="stylesheet" />
 </head>
 <body id="page-top">
     <!-- Navigation-->
@@ -72,7 +66,9 @@
                         <a href="mailto:@x.Mail">@x.Mail</a>
                     </div>
                     <p class="lead mb-5">@x.Aciklama</p>
-                    @Html.Partial("SosyalMedya")
+                    
+                   @*  @Html.Partial("SosyalMedya", new List<NTierCvPro.EntityLayer.Concrete.SosyalMedya>()) *@
+                    @await Html.PartialAsync("SosyalMedyaPartial")
                 </div>
             </section>
         }
@@ -80,32 +76,32 @@
 
         <!-- Experience-->
         <section class="resume-section" id="experience">
-            @Html.Partial("Deneyim")
+            @Html.Partial("Deneyim", new List<NTierCvPro.EntityLayer.Concrete.Deneyimlerim>())
         </section>
         <hr class="m-0" />
         <!-- Education-->
         <section class="resume-section" id="education">
-            @Html.Partial("Egitimlerim")
+            @Html.Partial("Egitimlerim", new List<NTierCvPro.EntityLayer.Concrete.Egitimlerim>())
         </section>
         <hr class="m-0" />
         <!-- Skills-->
         <section class="resume-section" id="skills">
-            @Html.Partial("Yeteneklerim")
+            @Html.Partial("Yeteneklerim", new List<NTierCvPro.EntityLayer.Concrete.Yeteneklerim>())
         </section>
         <hr class="m-0" />
         <!-- Interests-->
         <section class="resume-section" id="interests">
-            @Html.Partial("Hobilerim")
+            @Html.Partial("Hobilerim", new List<NTierCvPro.EntityLayer.Concrete.Hobilerim>())
         </section>
         <hr class="m-0" />
         <!-- Awards-->
         <section class="resume-section" id="awards">
-            @Html.Partial("Sertifikalar")
+            @Html.Partial("Sertifikalar", new List<NTierCvPro.EntityLayer.Concrete.Sertifikalarim>())
         </section>
         <hr class="m-0" />
         <!-- Contact-->
         <section class="resume-section" id="contact">
-            @Html.Partial("Iletisim")
+            @Html.Partial("Iletisim", new List<NTierCvPro.EntityLayer.Concrete.Iletisim>())
         </section>
     </div>
     <!-- Bootstrap core JS-->
@@ -114,6 +110,6 @@
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <!-- Core theme JS-->
-    <script src="/startbootstrap-resume-gh-pages/js/scripts.js"></script>
+    <script src="~/CvFrontEnd/js/scripts.js"></script>
 </body>
 </html>

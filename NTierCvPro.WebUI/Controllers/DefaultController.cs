@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NTierCvPro.BusinessLayer.Abstract;
+using NTierCvPro.EntityLayer.Concrete;
 
 namespace NTierCvPro.WebUI.Controllers
 {
@@ -41,10 +42,17 @@ namespace NTierCvPro.WebUI.Controllers
             return PartialView(deneyimler);
         }
 
-        public PartialViewResult SosyalMedya()
+        //public PartialViewResult SosyalMedya()
+        //{
+        //    var sosyalMedya = _sosyalMedyaService.TGetList().Where(x => x.Durum == true).ToList();
+        //    return PartialView(sosyalMedya);
+        //}
+
+        public IActionResult SosyalMedya()
         {
-            var sosyalMedya = _sosyalMedyaService.TGetList().Where(x => x.Durum == true).ToList();
-            return PartialView(sosyalMedya);
+            // Sosyal medya verilerini al ve partial view'e iletilmek üzere döndür
+            List<SosyalMedya> sosyalMedyaDegerler = _sosyalMedyaService.TGetList().Where(x => x.Durum == true).ToList();
+            return PartialView("SosyalMedyaPartial", sosyalMedyaDegerler);
         }
 
         public PartialViewResult Egitimlerim()
@@ -77,13 +85,12 @@ namespace NTierCvPro.WebUI.Controllers
             return PartialView();
         }
 
-        //[HttpPost]
-        //public PartialViewResult Iletisim(Tbl_Iletisim t)
-        //{
-        //    t.Tarih = DateTime.Parse(DateTime.Now.ToShortDateString());
-        //    db.Tbl_Iletisim.Add(t);
-        //    db.SaveChanges();
-        //    return PartialView();
-        //}
+        [HttpPost]
+        public PartialViewResult Iletisim(Iletisim t)
+        {
+            t.Tarih = DateTime.Parse(DateTime.Now.ToShortDateString());
+            _iletisimService.TInsert(t);
+            return PartialView();
+        }
     }
 }
