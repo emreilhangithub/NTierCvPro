@@ -26,7 +26,7 @@ namespace NTierCvPro.WebUI.Controllers
         }
 
         [HttpPost]
-        public PartialViewResult Iletisim(Iletisim t)
+        public IActionResult Iletisim(Iletisim t)
         {
             t.Tarih = DateTime.Parse(DateTime.Now.ToShortDateString());
             _iletisimService.TInsert(t);
