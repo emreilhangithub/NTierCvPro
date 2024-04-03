@@ -30,7 +30,7 @@ namespace NTierCvPro.WebUI.Controllers
         {
             t.Tarih = DateTime.Parse(DateTime.Now.ToShortDateString());
             _iletisimService.TInsert(t);
-            return PartialView();
+            return RedirectToAction("Index");
         }
     }
 }

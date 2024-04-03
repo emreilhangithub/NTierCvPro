@@ -15,13 +15,13 @@ namespace NTierCvPro.WebUI.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var egitimlerim = _egitimlerimService.TGetList();
+            return View(egitimlerim);
         }
         [HttpGet]
         public IActionResult EgitimEkle()
         {
-            var egitimlerim = _egitimlerimService.TGetList();
-            return View(egitimlerim);
+            return View();
         }
         [HttpPost]
         public IActionResult EgitimEkle(Egitimlerim p)

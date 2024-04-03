@@ -15,7 +15,7 @@ namespace NTierCvPro.WebUI.Controllers
 
         public IActionResult Index()
         {
-            var hakkimda = _hakkimdaService.TGetList();
+            var hakkimda = _hakkimdaService.TFind(x => x.ID == 1);
             return View(hakkimda);
         }
         [HttpPost]
@@ -30,6 +30,12 @@ namespace NTierCvPro.WebUI.Controllers
             hakkimda.Aciklama = t.Aciklama;
             hakkimda.Resim = t.Resim;
             _hakkimdaService.TUpdate(hakkimda);
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public IActionResult HakkimdaEkle(Hakkimda t)
+        {
+            _hakkimdaService.TInsert(t);
             return RedirectToAction("Index");
         }
     }

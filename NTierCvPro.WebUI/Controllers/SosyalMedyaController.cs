@@ -26,6 +26,7 @@ namespace NTierCvPro.WebUI.Controllers
         [HttpPost]
         public IActionResult Ekle(SosyalMedya p)
         {
+            p.Durum = true;
             _sosyalMedyaService.TInsert(p);
             return RedirectToAction("Index");
         }
