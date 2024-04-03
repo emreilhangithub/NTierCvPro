@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\startbootstrap-resume-gh-pages\**" />
+    <Content Remove="wwwroot\startbootstrap-resume-gh-pages\**" />
+    <EmbeddedResource Remove="wwwroot\startbootstrap-resume-gh-pages\**" />
+    <None Remove="wwwroot\startbootstrap-resume-gh-pages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\AdminLTE-3.0.4\.github\ISSUE_TEMPLATE\bug-report-for-adminlte-v2-4-x.md" />
     <None Include="wwwroot\AdminLTE-3.0.4\.github\ISSUE_TEMPLATE\bug-report-for-adminlte-v3-x.md" />
     <None Include="wwwroot\AdminLTE-3.0.4\.github\ISSUE_TEMPLATE\feature-request-for-adminlte-v3-x.md" />
@@ -2105,11 +2112,6 @@
     <None Include="wwwroot\login-form-20\js\.DS_Store" />
     <None Include="wwwroot\login-form-20\scss\.DS_Store" />
     <None Include="wwwroot\login-form-20\scss\bootstrap\.DS_Store" />
-    <None Include="wwwroot\startbootstrap-resume-gh-pages\assets\img\favicon.ico" />
-    <None Include="wwwroot\startbootstrap-resume-gh-pages\assets\img\profile.jpg" />
-    <None Include="wwwroot\startbootstrap-resume-gh-pages\css\styles.css" />
-    <None Include="wwwroot\startbootstrap-resume-gh-pages\index.html" />
-    <None Include="wwwroot\startbootstrap-resume-gh-pages\js\scripts.js" />
   </ItemGroup>
 
   <ItemGroup>
